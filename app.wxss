@@ -1,4 +1,8 @@
 /**app.wxss**/
+
+@import 'dist/weui/weui.wxss';
+@import 'dist/zanui/index.wxss';
+
 .container {
   height: 100%;
   display: flex;

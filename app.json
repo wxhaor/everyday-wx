@@ -1,12 +1,44 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/food/index",
+    "pages/person/index",
+    "pages/index/edit/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/tabbar/home.png",
+        "selectedIconPath": "img/tabbar/home_fill.png"
+      },
+      {
+        "pagePath": "pages/food/index",
+        "text": "点子",
+        "iconPath": "img/tabbar/creative.png",
+        "selectedIconPath": "img/tabbar/creative_fill.png"
+      },
+      {
+        "pagePath": "pages/food/index",
+        "text": "财富",
+        "iconPath": "img/tabbar/recharge.png",
+        "selectedIconPath": "img/tabbar/recharge_fill.png"
+      },
+      {
+        "pagePath": "pages/person/index",
+        "text": "我的",
+        "iconPath": "img/tabbar/people.png",
+        "selectedIconPath": "img/tabbar/people_fill.png"
+      }
+    ]
+  },
+  "debug": true
 }

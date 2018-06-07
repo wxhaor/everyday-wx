@@ -1,0 +1,28 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__hd">
+    <!-- <view class="page__title">吃吃吃,吃啥啦</view>
+    <view class="page__desc">就餐信息</view> -->
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <zan-panel title="就餐信息">
+
+        <zan-field title="菜名单价" componentId type="text" placeholder="请输入菜名" right="true" mode="wrapped" value="{{ foodDetailModel.foodName }}">
+        </zan-field>
+
+        <zan-field title="单价" type="number" placeholder="请输入单价" right="true" mode="wrapped" value="{{ foodDetailModel.unitPrice }}">
+        </zan-field>
+
+        <view style="float:right ; padding: 20px 15px">
+          <zan-stepper stepper="{{ foodDetailModel.count }}" min="1" data-component-id="stepper" bind:change="handleZanStepperChange">
+          </zan-stepper>
+        </view>
+
+      </zan-panel>
+      <zan-button-group>
+        <zan-button type="primary" bind:btnclick="formSubmit">确认添加</zan-button>
+      </zan-button-group>
+    </form>
+  </view>
+
+</view>
