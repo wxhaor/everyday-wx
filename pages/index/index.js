@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const apis = require('../../utils/api.js')
 
 Page({
   data: {
@@ -41,7 +42,7 @@ Page({
       "foodMainModel": {
         "mealTimeTypeCode": 1,
         "userId": 0,
-        "": 0
+        "eventDate": '2018-06-08'
       }
     },
 
@@ -191,15 +192,45 @@ Page({
       mealInfo: mealInfo
     })
   },
-  itemBoxTap: function () {
+  itemBoxTap: function (e) {
+    var index = e.currentTarget.dataset.index;
+    console.info("index:{}", index)
     wx.navigateTo({
-      url: "edit/index"
+      url: "edit/index?idx=" + index
     })
   },
   boxAddBtnTap: function () {
     wx.navigateTo({
       url: "edit/index"
     })
-  }
+  },
+  bindDateChange: function (e) {
+    let date = e.detail.value;
+    this.setData({
+      ['mealInfo.foodMainModel.eventDate']: date
+    })
+  },
+  submitData: function () {
+    // apis.post({
+    //   url: '/hao-business/oneMeal/add',
+    //   data: this.data.mealInfo,
+    //   success: function (res) {
+    //     console.info(res)
+    //   }
+    // })
 
+    apis.postT({
+      url: '/hao-business/oneMeal/add',
+      data: this.data.mealInfo
+    }).then(res => {
+      console.info("1:" + JSON.stringify(res))
+      return apis.postT({
+        url: '/hao-business/oneMeal/add',
+        data: this.data.mealInfo
+      })
+    }).then(res => {
+      console.info("2:" + JSON.stringify(res))
+
+    })
+  }
 })

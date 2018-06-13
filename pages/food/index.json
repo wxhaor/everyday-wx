@@ -1,1 +1,10 @@
-{}
+{
+  "navigationBarTitleText": "Card 卡片",
+  "usingComponents": {
+    "zan-popup": "../../dist/zanui/popup/index",
+    "zan-button": "../../dist/zanui/btn/index",
+    "zan-card": "../../dist/zanui/card/index",
+    "zan-panel": "../../dist/zanui/panel/index",
+    "doc-page": "../../components/doc-page/index"
+  }
+}

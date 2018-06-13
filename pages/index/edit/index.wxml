@@ -4,24 +4,28 @@
     <view class="page__desc">就餐信息</view> -->
   </view>
   <view class="page__bd">
-    <form bindsubmit="formSubmit" bindreset="formReset">
+    <form bindsubmit="formSubmit">
       <zan-panel title="就餐信息">
 
-        <zan-field title="菜名单价" componentId type="text" placeholder="请输入菜名" right="true" mode="wrapped" value="{{ foodDetailModel.foodName }}">
+        <zan-field title="菜名单价" name='foodName' componentId type="text" placeholder="请输入菜名" right="true" mode="wrapped" value="{{ foodDetailModel.foodName }}">
         </zan-field>
 
-        <zan-field title="单价" type="number" placeholder="请输入单价" right="true" mode="wrapped" value="{{ foodDetailModel.unitPrice }}">
+
+        <zan-field title="单价" name='unitPrice' type="number" placeholder="请输入单价" right="true" mode="wrapped" value="{{ foodDetailModel.unitPrice }}">
         </zan-field>
 
         <view style="float:right ; padding: 20px 15px">
-          <zan-stepper stepper="{{ foodDetailModel.count }}" min="1" data-component-id="stepper" bind:change="handleZanStepperChange">
+          <zan-stepper name='count' value="{{ foodDetailModel.count }}" stepper="{{ foodDetailModel.count }}" min="1" data-component-id="stepper" bind:change="handleZanStepperChange">
           </zan-stepper>
         </view>
 
+
       </zan-panel>
       <zan-button-group>
-        <zan-button type="primary" bind:btnclick="formSubmit">确认添加</zan-button>
+        <!-- <zan-button type="primary" bind:btnclick="formSubmit">确认添加</zan-button> -->
+        <button class="weui-btn" type="primary" form-type="submit">确认添加</button>
       </zan-button-group>
+
     </form>
   </view>
 

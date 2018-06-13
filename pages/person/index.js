@@ -44,6 +44,15 @@ Page({
     }
   },
   getUserInfo: function (e) {
+    return new utils.Promise((resolve, reject) => {
+      if (this.globalData.userInfo) {
+        resolve(this.globalData.userInfo)
+      }
+      return utils.getUserInfo().then(res => {
+        resolve(this.globalData.userInfo = res.userInfo)
+      })
+    })
+    
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

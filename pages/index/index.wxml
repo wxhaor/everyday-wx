@@ -1,4 +1,18 @@
 <view class="weui-cells weui-cells_after-title">
+
+
+
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+      <view class="weui-label">时间</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{mealInfo.foodMainModel.eventDate}}" start="2015-09-01" end="2018-09-01"  bindchange="bindDateChange">
+        <view class="weui-select weui-select_in-select-after"> {{mealInfo.foodMainModel.eventDate}}</view>
+      </picker>
+    </view>
+  </view>
+
   <view class="weui-cell weui-cell_select">
     <view class="weui-cell__hd weui-cell__hd_in-select-after">
       <view class="weui-label">就餐类型</view>
@@ -16,10 +30,9 @@
 </view>
 <view class="list-box">
   <view class="item-box" wx:for="{{mealInfo.foodDetailModels}}" wx:key="{{index}}">
-    <view class="item-conts " data-index="{{index}}" style="{{item.left}}" 
-    bindtap="itemBoxTap" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+    <view class="item-conts " data-index="{{index}}" style="{{item.left}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
       <view class="item-info">
-        <view class="img-box">
+        <view class="img-box" bindtap="itemBoxTap" data-index="{{index}}">
           <image src="{{item.pic}}" class="img" />
         </view>
         <view class="text-box">
@@ -45,7 +58,7 @@
     <view class="all-selected " bindtap="bindAllSelect">合计：¥ {{mealInfo.foodMainModel.totalPrice}}</view>
 
   </view>
-  <view class="box-submit-btn {{goodsList.noSelect?'no-select':''}}" bindtap="toPayOrder">提交</view>
+  <view class="box-submit-btn {{goodsList.noSelect?'no-select':''}}" bindtap="submitData">提交</view>
 
 
 </view>

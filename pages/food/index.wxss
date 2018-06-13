@@ -1,1 +1,19 @@
-/* pages/food/index.wxss */
+/* pages/idea/idea.wxss */
+
+.circle-float{  
+  color: #ffffff;  
+  position: fixed;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  bottom: 20rpx;  
+  right: 20rpx;  
+  width: 80rpx;  
+  height: 80rpx;  
+  border-radius: 50%;  
+  font-size: 36rpx;  
+  background: #1AAD19;  
+}  
+.list-card{
+  
+}

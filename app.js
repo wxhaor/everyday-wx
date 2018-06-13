@@ -1,4 +1,7 @@
 //app.js
+
+var apis = require('utils/api.js')
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +38,8 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  func: {
+    apip: apis.test
   }
 })
