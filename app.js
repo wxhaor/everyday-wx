@@ -40,6 +40,6 @@ App({
     userInfo: null
   },
   func: {
-    apip: apis.test
+    apip: apis.post
   }
 })

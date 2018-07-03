@@ -4,15 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.9",
-	"appid": "touristappid",
+	"libVersion": "2.1.1",
+	"appid": "wxa908567f8af99b25",
 	"projectname": "everyday-wx",
 	"condition": {
 		"search": {

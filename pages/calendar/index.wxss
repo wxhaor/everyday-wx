@@ -1,0 +1,21 @@
+/* pages/calendar/index.wxss */
+
+.demo {
+    padding: 15px;
+}
+
+.demo-calendar {
+    background-color: white;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.demo-header {
+    font-size: large;
+    color: #59518d;    
+}
+
+.demo-board {
+    color: #c7cbe2;
+    font-weight: bold;
+}

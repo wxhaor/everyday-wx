@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var Promise = require('../../plugins/es6-promise.js')
 
 Page({
   data: {
@@ -44,11 +45,11 @@ Page({
     }
   },
   getUserInfo: function (e) {
-    return new utils.Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       if (this.globalData.userInfo) {
         resolve(this.globalData.userInfo)
       }
-      return utils.getUserInfo().then(res => {
+      return getUserInfo().then(res => {
         resolve(this.globalData.userInfo = res.userInfo)
       })
     })

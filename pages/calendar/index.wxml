@@ -1,0 +1,17 @@
+<!--pages/calendar/index.wxml-->
+
+<view class="demo">
+  <calendar 
+  cell-size="30" 
+  weeks-type='cn' 
+  next="{{true}}" 
+  prev="{{true}}" 
+  show-more-days="{{true}}" 
+  calendar-style="demo-calendar" 
+  header-style="demo-header" 
+  board-style="demo-board" 
+  days-color="{{days_style}}" 
+  binddateChange="dateChange" 
+  binddayClick="dayClick" 
+  />
+</view>

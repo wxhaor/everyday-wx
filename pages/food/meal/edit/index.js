@@ -71,6 +71,8 @@ Page({
     prevPage.setData({
       mealInfo: mealInfo
     });
+    //重新计算和
+    prevPage.sumPrice()
     wx.navigateBack();
   },
 

@@ -1,5 +1,9 @@
 /* pages/idea/idea.wxss */
 
+.demo {
+  padding: 10px;
+}
+
 .circle-float{  
   color: #ffffff;  
   position: fixed;  
@@ -14,6 +18,9 @@
   font-size: 36rpx;  
   background: #1AAD19;  
 }  
-.list-card{
-  
+
+.list-card {
+  background-color: #c7cbe2;
+  margin-bottom: 2px;
+  border-radius: 5px;
 }

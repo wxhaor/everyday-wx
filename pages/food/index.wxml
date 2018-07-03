@@ -1,14 +1,18 @@
-<doc-page title="点子" without-padding>
+<doc-page title="吃吃喝喝" without-padding= "5px">
 
   <button class='circle-float' bindtap="add">+</button>
-
+<view class="demo">
   <zan-panel>
     <view wx:for="{{list}}" wx:for-item="item" wx:key="id">
 
-      <zan-card card-class="list-card" thumb="{{item.mainImageUrl}}" price="{{item.unitPrice}}" title="{{item.foodName}}" num="2" desc="{{item.id}}" status="已发货">
+      <zan-card card-class="list-card" 
+      thumb="{{item.mainImageUrl}}" 
+      price="{{item.unitPrice}}" 
+      title="{{item.foodName}}" 
+      num="{{item.num}}" desc="{{item.id}}" status="状态" >
       </zan-card>
     </view>
   </zan-panel>
-
+</view>
 
 </doc-page>

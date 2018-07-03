@@ -10,6 +10,11 @@ Page({
       }
     ]
   },
+  add: function () {
+    wx.navigateTo({
+      url: "meal/index"
+    })
+  }
 
 
 })
